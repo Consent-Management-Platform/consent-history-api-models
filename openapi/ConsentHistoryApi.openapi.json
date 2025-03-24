@@ -154,6 +154,9 @@
                         "description": "Consent event timestamp, using the ISO 8601 format.",
                         "format": "date-time"
                     },
+                    "eventType": {
+                        "$ref": "#/components/schemas/ConsentEventType"
+                    },
                     "oldImage": {
                         "$ref": "#/components/schemas/Consent"
                     },
@@ -164,7 +167,8 @@
                 "required": [
                     "consentId",
                     "eventId",
-                    "eventTime"
+                    "eventTime",
+                    "eventType"
                 ]
             },
             "ConsentData": {
@@ -176,6 +180,15 @@
                 },
                 "maxProperties": 32,
                 "description": "Consent data represented by string key-value pairs. Keys must be between 1-64 characters long, values must be between 1-256 characters long, and up to 32 key-value pairs may be provided."
+            },
+            "ConsentEventType": {
+                "type": "string",
+                "description": "Type of consent change event.",
+                "enum": [
+                    "INSERT",
+                    "MODIFY",
+                    "REMOVE"
+                ]
             },
             "ConsentStatus": {
                 "type": "string",

@@ -48,6 +48,9 @@ structure ConsentChangeEvent {
     @required
     eventTime: DateTime
 
+    @required
+    eventType: ConsentEventType
+
     @documentation("Old consent data from before the change.")
     oldImage: Consent
 

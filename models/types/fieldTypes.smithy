@@ -23,6 +23,13 @@ string ConsentType with [UniqueId]
 @documentation("Unique identifier for a consent change event.")
 string ConsentEventId with [UniqueId]
 
+@documentation("Type of consent change event.")
+enum ConsentEventType {
+    INSERT,
+    MODIFY,
+    REMOVE
+}
+
 @documentation("Current status of a Consent.")
 enum ConsentStatus {
     ACTIVE,
