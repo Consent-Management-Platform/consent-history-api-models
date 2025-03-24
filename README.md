@@ -1,7 +1,10 @@
 # consent-history-api-models
+
+[![Generate API Docs](https://github.com/Consent-Management-Platform/consent-history-api-models/actions/workflows/generate-api-docs.yaml/badge.svg?branch=main)](https://github.com/Consent-Management-Platform/consent-history-api-models/actions/workflows/generate-api-docs.yaml)
+
 This package defines API models for the Consent History API.
 
-See [latest v1 API documentation here](https://consent-history-platform.github.io/consent-history-api-models/v1/docs.html).
+See [latest v1 API documentation here](https://consent-management-platform.github.io/consent-history-api-models/v1/docs.html).
 
 ## Technologies
 [Smithy](https://smithy.io) is used to produce protocol and technology agnostic API models that can be used to automatically generate:
