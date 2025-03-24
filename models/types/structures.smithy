@@ -1,6 +1,6 @@
 $version: "2.0"
 
-namespace com.consentframework.consentmanagement.api.models.types
+namespace com.consentframework.consenthistory.api.models.types
 
 @documentation("Consent data represented by string key-value pairs. Keys must be between 1-64 characters long, values must be between 1-256 characters long, and up to 32 key-value pairs may be provided.")
 @length(max: 32)
@@ -33,9 +33,32 @@ structure Consent {
 
     consentData: ConsentData
 
-    expiryTime: ConsentExpiryTime
+    expiryTime: DateTime
 }
 
-list ConsentList {
-    member: Consent
+@documentation("A user consent change event.")
+structure ConsentChangeEvent {
+    @required
+    consentId: ConsentId
+
+    @required
+    eventId: ConsentEventId
+
+    @documentation("Consent event timestamp, using the ISO 8601 format.")
+    @required
+    eventTime: DateTime
+
+    @documentation("Time when the Consent automatically expires, using the ISO 8601 format.")
+    expiryTime: DateTime
+
+    @documentation("Old consent data from before the change.")
+    oldImage: Consent
+
+    @documentation("New consent data after the change.")
+    newImage: Consent
+}
+
+@documentation("List of user consent change events.")
+list ConsentChangeEventList {
+    member: ConsentChangeEvent
 }

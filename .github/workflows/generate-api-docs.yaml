@@ -1,4 +1,4 @@
-name: Generate Consent Management API Docs
+name: Generate API Docs
 
 on:
   # Automatically trigger when push model/package config changes to main branch
@@ -30,7 +30,7 @@ jobs:
           api-configs: |-
             [
               {
-                "openapi-json-filepath": "openapi/ConsentManagementApi.openapi.json",
+                "openapi-json-filepath": "openapi/ConsentHistoryApi.openapi.json",
                 "api-doc-filepath": "v1/docs.html"
               }
             ]

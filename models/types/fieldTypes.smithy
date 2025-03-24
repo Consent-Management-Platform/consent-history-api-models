@@ -1,6 +1,6 @@
 $version: "2.0"
 
-namespace com.consentframework.consentmanagement.api.models.types
+namespace com.consentframework.consenthistory.api.models.types
 
 // Allow alphanumeric characters as well as '-', '_', and '.'.
 // For now excluding any characters that may be encoded when passed through request path parameters.
@@ -20,9 +20,8 @@ string UserId with [UniqueId]
 @documentation("Consent type.")
 string ConsentType with [UniqueId]
 
-@documentation("Time when the Consent automatically expires, using the ISO 8601 format.")
-@timestampFormat("date-time")
-timestamp ConsentExpiryTime
+@documentation("Unique identifier for a consent change event.")
+string ConsentEventId with [UniqueId]
 
 @documentation("Current status of a Consent.")
 enum ConsentStatus {
@@ -30,3 +29,7 @@ enum ConsentStatus {
     EXPIRED,
     REVOKED
 }
+
+@documentation("Date time string, using the ISO 8601 format.")
+@timestampFormat("date-time")
+timestamp DateTime

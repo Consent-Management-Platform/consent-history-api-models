@@ -18,7 +18,7 @@ export WORKSPACE_DIR="$current_dir/.."
 cd $WORKSPACE_DIR
 
 # Set up other env variables
-export OPENAPI_JSON_FILEPATH="build/smithyprojections/consent-management-api-models/source/openapi/ConsentManagementApi.openapi.json"
+export OPENAPI_JSON_FILEPATH="build/smithyprojections/consent-history-api-models/source/openapi/ConsentHistoryApi.openapi.json"
 export API_DOCS_HTML_FILEPATH="build/docs/docs.html"
 
 # Generate OpenAPI spec files based on latest models

@@ -29,8 +29,8 @@ dependencies {
   implementation("org.openapitools:jackson-databind-nullable:0.2.6")
 }
 
-val mavenPackageGroupId = "com.consentframework.consentmanagement"
-val mavenPackageVersion = "0.2.10"
+val mavenPackageGroupId = "com.consentframework.consenthistory"
+val mavenPackageVersion = "0.1.0"
 
 val openApiGeneratedSourcesFolder = "${layout.buildDirectory.get()}/generated-sources"
 
@@ -42,14 +42,14 @@ openApiGenerate {
   library.set("native")
 
   // Input/output and Java namespaces
-  inputSpec.set("$rootDir/build/smithyprojections/consent-management-api-models/source/openapi/ConsentManagementApi.openapi.json")
+  inputSpec.set("$rootDir/build/smithyprojections/consent-history-api-models/source/openapi/ConsentHistoryApi.openapi.json")
   outputDir.set(openApiGeneratedSourcesFolder)
-  apiPackage.set("com.consentframework.consentmanagement.api.client")
-  modelPackage.set("com.consentframework.consentmanagement.api.models")
+  apiPackage.set("com.consentframework.consenthistory.api.client")
+  modelPackage.set("com.consentframework.consenthistory.api.models")
 
   // Generated package group/id/version
   groupId.set(mavenPackageGroupId)
-  id.set("consentmanagement-api-java-client")
+  id.set("consenthistory-api-java-client")
   version.set(mavenPackageVersion)
 
   configOptions.set(mapOf(
@@ -66,7 +66,7 @@ publishing {
   repositories {
     maven {
       name = "GitHubPackages"
-      url = uri("https://maven.pkg.github.com/Consent-Management-Platform/consent-management-api-models")
+      url = uri("https://maven.pkg.github.com/Consent-Management-Platform/consent-history-api-models")
       credentials {
         username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
         password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
@@ -77,7 +77,7 @@ publishing {
   publications {
     register<MavenPublication>("gpr") {
       groupId = mavenPackageGroupId
-      artifactId = "consentmanagement-api-models"
+      artifactId = "consenthistory-api-models"
       version = mavenPackageVersion
 
       from(components["java"])
@@ -99,7 +99,7 @@ tasks.compileJava {
 }
 
 tasks.register<Copy>("copyOpenApiSpec") {
-  from("${layout.buildDirectory.get()}/smithyprojections/consent-management-api-models/source/openapi")
+  from("${layout.buildDirectory.get()}/smithyprojections/consent-history-api-models/source/openapi")
   into("openapi")
 }
 

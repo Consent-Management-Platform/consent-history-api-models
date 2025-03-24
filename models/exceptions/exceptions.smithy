@@ -1,6 +1,6 @@
 $version: "2.0"
 
-namespace com.consentframework.consentmanagement.api.models.exceptions
+namespace com.consentframework.consenthistory.api.models.exceptions
 
 @documentation("This exception is thrown when the request is invalid.")
 @error("client")

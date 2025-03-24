@@ -1,14 +1,11 @@
 $version: "2.0"
 
-namespace com.consentframework.consentmanagement.api.models
+namespace com.consentframework.consenthistory.api.models
 
 use aws.api#service
 use aws.apigateway#requestValidator
 use aws.protocols#restJson1
-use com.consentframework.consentmanagement.api.models.operations#CreateServiceUserConsent
-use com.consentframework.consentmanagement.api.models.operations#GetServiceUserConsent
-use com.consentframework.consentmanagement.api.models.operations#ListServiceUserConsent
-use com.consentframework.consentmanagement.api.models.operations#UpdateServiceUserConsent
+use com.consentframework.consenthistory.api.models.operations#GetHistoryForServiceUserConsent
 
 @aws.apigateway#integration(
     httpMethod: "POST",
@@ -18,17 +15,14 @@ use com.consentframework.consentmanagement.api.models.operations#UpdateServiceUs
 )
 @requestValidator("full")
 @restJson1
-@title("Consent Management API")
+@title("Consent History API")
 @service(
-    sdkId: "ConsentManagement",
+    sdkId: "ConsentHistory",
     arnNamespace: "execute-api"
 )
-service ConsentManagementApi {
-    version: "2024-07-03"
+service ConsentHistoryApi {
+    version: "2025-03-23"
     operations: [
-        CreateServiceUserConsent,
-        GetServiceUserConsent,
-        ListServiceUserConsent,
-        UpdateServiceUserConsent
+        GetHistoryForServiceUserConsent
     ]
 }

@@ -11,4 +11,4 @@ pluginManagement {
   }
 }
 
-rootProject.name = "consent-management-api-models"
+rootProject.name = "consent-history-api-models"

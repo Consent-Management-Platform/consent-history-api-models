@@ -1,7 +1,7 @@
-# consent-management-api-models
-This package defines API models for the Consent Management API.
+# consent-history-api-models
+This package defines API models for the Consent History API.
 
-See [latest v1 API documentation here](https://consent-management-platform.github.io/consent-management-api-models/v1/docs.html).
+See [latest v1 API documentation here](https://consent-history-platform.github.io/consent-history-api-models/v1/docs.html).
 
 ## Technologies
 [Smithy](https://smithy.io) is used to produce protocol and technology agnostic API models that can be used to automatically generate:
