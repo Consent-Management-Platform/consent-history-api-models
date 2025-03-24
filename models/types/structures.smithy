@@ -48,9 +48,6 @@ structure ConsentChangeEvent {
     @required
     eventTime: DateTime
 
-    @documentation("Time when the Consent automatically expires, using the ISO 8601 format.")
-    expiryTime: DateTime
-
     @documentation("Old consent data from before the change.")
     oldImage: Consent
 
