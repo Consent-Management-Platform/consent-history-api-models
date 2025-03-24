@@ -154,11 +154,6 @@
                         "description": "Consent event timestamp, using the ISO 8601 format.",
                         "format": "date-time"
                     },
-                    "expiryTime": {
-                        "type": "string",
-                        "description": "Time when the Consent automatically expires, using the ISO 8601 format.",
-                        "format": "date-time"
-                    },
                     "oldImage": {
                         "$ref": "#/components/schemas/Consent"
                     },
