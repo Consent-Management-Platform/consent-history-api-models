@@ -2,12 +2,12 @@ $version: "2.0"
 
 namespace com.consentframework.consenthistory.api.models.operations
 
-use com.consentframework.consenthistory.api.models.exceptions#InternalServiceException
-use com.consentframework.consenthistory.api.models.exceptions#NotFoundException
 use com.consentframework.consenthistory.api.models.types#ConsentChangeEventList
-use com.consentframework.consenthistory.api.models.types#ConsentId
-use com.consentframework.consenthistory.api.models.types#ServiceId
-use com.consentframework.consenthistory.api.models.types#UserId
+use com.consentframework.shared.models.consent#ConsentId
+use com.consentframework.shared.models.consent#ServiceId
+use com.consentframework.shared.models.consent#UserId
+use com.consentframework.shared.models.exceptions#InternalServiceException
+use com.consentframework.shared.models.exceptions#NotFoundException
 
 @documentation("Retrieve history for a given ServiceUserConsent.")
 @readonly
