@@ -7,7 +7,7 @@
     "paths": {
         "/v1/consent-history/services/{serviceId}/users/{userId}/consents/{consentId}": {
             "get": {
-                "description": "Retrieve history for a given ServiceUserConsent.",
+                "description": "Retrieve history for a given service user consent.",
                 "operationId": "GetHistoryForServiceUserConsent",
                 "parameters": [
                     {

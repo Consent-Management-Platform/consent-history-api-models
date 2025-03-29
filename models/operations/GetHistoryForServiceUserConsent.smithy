@@ -9,7 +9,7 @@ use com.consentframework.shared.models.consent#UserId
 use com.consentframework.shared.models.exceptions#InternalServiceException
 use com.consentframework.shared.models.exceptions#NotFoundException
 
-@documentation("Retrieve history for a given ServiceUserConsent.")
+@documentation("Retrieve history for a given service user consent.")
 @readonly
 @http(method: "GET", uri: "/v1/consent-history/services/{serviceId}/users/{userId}/consents/{consentId}", code: 200)
 operation GetHistoryForServiceUserConsent {
