@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     // Consent history API models
-    implementation("com.consentframework.consenthistory:consenthistory-api-models:0.1.0")
+    implementation("com.consentframework.consenthistory:consenthistory-api-models:0.2.0")
 }
 ```
 

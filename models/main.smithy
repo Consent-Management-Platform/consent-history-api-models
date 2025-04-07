@@ -5,6 +5,7 @@ namespace com.consentframework.consenthistory.api.models
 use aws.api#service
 use aws.apigateway#requestValidator
 use aws.protocols#restJson1
+use com.consentframework.consenthistory.api.models.operations#GetHistoryForServiceUser
 use com.consentframework.consenthistory.api.models.operations#GetHistoryForServiceUserConsent
 
 @aws.apigateway#integration(
@@ -21,8 +22,9 @@ use com.consentframework.consenthistory.api.models.operations#GetHistoryForServi
     arnNamespace: "execute-api"
 )
 service ConsentHistoryApi {
-    version: "2025-03-23"
+    version: "2025-04-06"
     operations: [
+        GetHistoryForServiceUser,
         GetHistoryForServiceUserConsent
     ]
 }

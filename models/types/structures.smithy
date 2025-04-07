@@ -31,3 +31,16 @@ structure ConsentChangeEvent {
 list ConsentChangeEventList {
     member: ConsentChangeEvent
 }
+
+@documentation("A specific consent's ID and associated consent change events.")
+structure ConsentHistory {
+    @required
+    consentId: ConsentId,
+
+    history: ConsentChangeEventList
+}
+
+@documentation("List of consent histories.")
+list ConsentHistoryList {
+    member: ConsentHistory
+}
